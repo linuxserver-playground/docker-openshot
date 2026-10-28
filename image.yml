@@ -8,9 +8,9 @@ summary: |-
 upstream:
   url: https://openshot.org/
   version:
-    type: command
-    run: |-
-      curl -sX GET http://ppa.launchpad.net/openshot.developers/ppa/ubuntu/dists/resolute/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: openshot-qt' | awk -F ': ' '/Version/{print $2;exit}'
+    type: deb_packages
+    index_url: http://ppa.launchpad.net/openshot.developers/ppa/ubuntu/dists/resolute/main/binary-amd64/Packages.gz
+    package: openshot-qt
   sponsor:
   - name: OpenShot
     url: https://www.openshot.org/donate/
